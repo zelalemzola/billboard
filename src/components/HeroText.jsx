@@ -2,7 +2,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Circle, CircleArrowOutUpRight } from "lucide-react";
 import { TextGenerateEffect } from "./ui/text-generate-effect";
-import { faCircle, faCircleArrowLeft, faCircleArrowUp, faCircleArrowUpLeft } from '@fortawesome/free-solid-svg-icons';
+import { faCircle, faCircleArrowLeft, faCircleArrowUp, faCircleArrowUpLeft, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Button } from './ui/button';
 import Link from 'next/link';
 
@@ -18,9 +18,9 @@ const HeroText = () => {
                 <TextGenerateEffect words={words} />
             </div>
         <p className="text-gray-600 text-justify">We also offer innovative solutions and techniques based on years of experience working with various companies.</p>
-        <div className='flex items-center gap-2'>
+        <div className='flex flex-wrap items-center gap-2'>
             <Link href='/' className='bg-secondary rounded-full text-black text-lg shadow-sm p-1 pl-2 flex items-center gap-2'>Discover our works   <FontAwesomeIcon icon={faCircleArrowLeft} size='2xl' className='rotIcon ' /></Link>
-            <Link href='/' className='border border-black p-3 rounded-full'>Get a call</Link>
+            <Link href='/' className='border bg-black text-white  p-1 pl-2 rounded-full flex items-center gap-2 text-lg'>Get a call<FontAwesomeIcon icon={faPhone} size="lg" style={{color: "#000000",}} className='bg-secondary p-1 rounded-full'/></Link>
         </div>
         </div>
 

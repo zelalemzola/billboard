@@ -6,7 +6,7 @@ import Link from "next/link";
 export function HeroBottom() {
   return (
     <div className="h-[40rem] w-full bg-white flex flex-col items-center justify-center overflow-hidden rounded-md">
-      <div className="flex flex-col gap-5">
+      <div className="flex flex-col gap-5 pb-10">
       <h1 className="md:text-3xl text-2xl lg:text-4xl font-bold text-center text-black relative z-20">
        Connect with us, Increase your Prescence !
       </h1>

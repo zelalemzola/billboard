@@ -96,6 +96,9 @@
   background-repeat: no-repeat;
   background-position: center;
  }
+ .rotIcon{
+  rotate: 150deg;
+ }
   .no-visible-scrollbar {
     scrollbar-width: none;
     -ms-overflow-style: none;

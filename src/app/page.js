@@ -13,11 +13,13 @@ import {
 } from "@/components/ui/card"
 import ServiceText from "@/components/ServiceText";
 import HeroBottom from "@/components/HeroBottom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
     <>
-   <main className="bg-cover bg-center h-screen" id="main" >
+   <main className="bg-cover bg-center md:h-screen" id="main" >
      
         <nav className='fixed w-full  p-3'>
         <div className=' flex items-center  text-black gap-4  p-2 border-2 border-black shadow-md mx-auto w-fit rounded-full '>
@@ -35,11 +37,7 @@ export default function Home() {
     <div className="w-full hidden md:flex items-end justify-between py-10 px-20">
       {/* <h1 className=" text-black text-2xl ">We offer <span className="text-secondary">services</span> designed <span className="text-gray-600">to optimize </span> your businesses <span className="text-gray-600">and achieve </span>your goals</h1> */}
        <ServiceText/>
-      <div className='flex items-center'>
-        <Link href='/' className='p-2 px-3 rounded-full text-black border border-2 border-black'>Learn more</Link>
-        <CircleArrowOutUpRight color="black" size={32}/>
-      </div>
-
+        <Link href='/' className='p-1 pl-3 rounded-full text-black bg-secondary text-lg flex items-center gap-2'>Learn more<FontAwesomeIcon icon={faCircleArrowLeft} size='2xl' className='rotIcon ' /></Link>
     </div>
     <div className="md:hidden md:mx-auto ">
       <h1 className="text-black mx-auto py-10 text-2xl text-center">Our Services</h1>

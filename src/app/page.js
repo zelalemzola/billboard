@@ -26,7 +26,7 @@ export default function Home() {
         <Link href='/' className='rounded-full hover:bg-black hover:text-white p-2 rounded-full'>Contact</Link>
         </div>
     </nav>
-    <div className="pt-[32%] md:pt-[20%] px-[5%] flex items-center justify-between">
+    <div className="pt-[40%] md:pt-[20%] px-[5%] flex items-center justify-between">
       <HeroText/>
       <div className="pl-[80px] w-1/3 hidden md:flex"><HeroRightText/></div>
     </div>

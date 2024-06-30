@@ -26,7 +26,7 @@ export default function Home() {
         <Link href='/' className='rounded-full hover:bg-black hover:text-white p-2 rounded-full'>Contact</Link>
         </div>
     </nav>
-    <div className="pt-[40%] md:pt-[20%] px-[5%] flex items-center justify-between">
+    <div className="pt-[45%] md:pt-[20%] px-[5%] flex items-center justify-between">
       <HeroText/>
       <div className="pl-[80px] w-1/3 hidden md:flex"><HeroRightText/></div>
     </div>
@@ -80,7 +80,7 @@ export default function Home() {
       </div>
     </div>
    </div>
-   <div className="md:h-screen bg-white flex flex-col pb-[120px] ">
+   <div className="md:h-screen bg-white flex flex-col pb-[160px] ">
     <HeroBottom/>
     <Link href='/' className="rounded-full bg-black text-white px-6 py-5 w-fit mx-auto">Contact Us</Link>
    </div>

@@ -15,6 +15,7 @@ import ServiceText from "@/components/ServiceText";
 import HeroBottom from "@/components/HeroBottom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import ServiceSmallText from "@/components/ServiceSmallText";
 
 export default function Home() {
   return (
@@ -39,8 +40,9 @@ export default function Home() {
        <ServiceText/>
         <Link href='/' className='p-1 pl-3 rounded-full text-black bg-secondary text-lg flex items-center gap-2'>Learn more<FontAwesomeIcon icon={faCircleArrowLeft} size='2xl' className='rotIcon ' /></Link>
     </div>
-    <div className="md:hidden md:mx-auto ">
+    <div className="md:hidden md:mx-auto flex flex-col gap-4 mb-4">
       <h1 className="text-black mx-auto py-10 text-2xl text-center">Our Services</h1>
+      <ServiceSmallText/>
     </div>
     <div className="w-full hidden md:flex flex-col md:flex-row items-center gap-4 px-20 ">
       <Card className='bg-black text-white h-[350px] w-[350px] rounded-2xl'>

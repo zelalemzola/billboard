@@ -46,26 +46,33 @@ export default function Home() {
     </div>
     <div className="w-full hidden md:flex flex-col md:flex-row items-center gap-4 px-20 ">
       <Card className='bg-black text-white h-[350px] w-[350px] rounded-2xl'>
-       <CardContent className='card1 h-[280px] rounded-t-2xl'>
+       <div className='px-3 pt-2'>
+       <CardContent className='card1 h-[280px] rounded-2xl'>
        </CardContent>
+      </div>
        <CardFooter className=''>
-        <h1 className="rounded-full bg-white text-black px-3 py-2 mx-auto my-5">Business Consultancy</h1>
+        <h1 className=" text-white text-xl my-5">Business Consultancy</h1>
        </CardFooter>
      </Card>
       <Card className='bg-black text-white h-[350px] w-[350px] rounded-2xl'>
-       <CardContent className='card2 h-[280px] rounded-t-2xl'>
+       <div className='px-3 pt-2'>
+       <CardContent className='card2 h-[280px] rounded-2xl'>
        </CardContent>
+      </div>
        <CardFooter className=''>
-        <h1 className="rounded-full bg-white text-black px-3 py-2 mx-auto my-5">Digital Marketing</h1>
+        <h1 className=" text-white text-xl my-5">Digital Marketing</h1>
        </CardFooter>
      </Card>
       <Card className='bg-black text-white h-[350px] w-[350px] rounded-2xl'>
-       <CardContent className='card3 h-[280px] rounded-t-2xl'>
+       <div className='px-3 pt-2'>
+       <CardContent className='card3 h-[280px] rounded-2xl'>
        </CardContent>
+      </div>
        <CardFooter className=''>
-        <h1 className="rounded-full bg-white text-black px-3 py-2 mx-auto my-5">Tech Solutions</h1>
+        <h1 className=" text-white text-xl my-5">Tech Solutions</h1>
        </CardFooter>
      </Card>
+    
            
     </div>
     <div className='flex flex-col items-center md:hidden gap-3'>

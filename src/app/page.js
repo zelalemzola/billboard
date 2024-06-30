@@ -19,7 +19,7 @@ import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 export default function Home() {
   return (
     <>
-   <main className="bg-cover bg-center h-screen" id="main" >
+   <main className="bg-cover bg-center md:h-screen" id="main" >
      
         <nav className='fixed w-full  p-3'>
         <div className=' flex items-center  text-black gap-4  p-2 border-2 border-black shadow-md mx-auto w-fit rounded-full '>
@@ -33,7 +33,7 @@ export default function Home() {
       <div className="pl-[80px] w-1/3 hidden md:flex"><HeroRightText/></div>
     </div>
    </main>
-   <div className="bg-white  h-screen p-10 pt-[70px]" >
+   <div className="bg-white  md:h-screen p-10 pt-[70px]" >
     <div className="w-full hidden md:flex items-end justify-between py-10 px-20">
       {/* <h1 className=" text-black text-2xl ">We offer <span className="text-secondary">services</span> designed <span className="text-gray-600">to optimize </span> your businesses <span className="text-gray-600">and achieve </span>your goals</h1> */}
        <ServiceText/>
@@ -85,7 +85,7 @@ export default function Home() {
       </div>
     </div>
    </div>
-   <div className="h-screen bg-white flex flex-col pb-[160px] ">
+   <div className="md:h-screen bg-white flex flex-col pb-[160px] ">
     <HeroBottom/>
 
    </div>

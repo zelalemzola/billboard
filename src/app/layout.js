@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 const inter = Yeseva_One({ subsets: ["latin"] , weight:'400' });
 
 export const metadata = {
-  title: "Askmar",
+  title: "Billboards",
   description: "",
 };
 

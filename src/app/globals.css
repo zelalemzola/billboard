@@ -78,3 +78,30 @@
   #main{
     background-image: url('/asbg.png');
   }
+ .card1{
+  background-image: url('/consultancy.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+ .card2{
+  background-image: url('/dig.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+ .card3{
+  background-image: url('/web.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+ }
+  .no-visible-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+  }
+   
+  .no-visible-scrollbar::-webkit-scrollbar {
+    display: none;
+  }

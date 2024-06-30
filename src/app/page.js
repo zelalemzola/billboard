@@ -82,7 +82,7 @@ export default function Home() {
    </div>
    <div className="md:h-screen bg-white flex flex-col pb-[160px] ">
     <HeroBottom/>
-    <Link href='/' className="rounded-full bg-black text-white px-6 py-5 w-fit mx-auto">Contact Us</Link>
+
    </div>
    </>
   );

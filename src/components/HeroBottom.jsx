@@ -1,13 +1,17 @@
 "use client";
 import React from "react";
 import { SparklesCore } from "./ui/sparkles";
+import Link from "next/link";
  
 export function HeroBottom() {
   return (
     <div className="h-[40rem] w-full bg-white flex flex-col items-center justify-center overflow-hidden rounded-md">
+      <div className="flex flex-col gap-5">
       <h1 className="md:text-3xl text-2xl lg:text-4xl font-bold text-center text-black relative z-20">
        Connect with us, Increase your Prescence !
       </h1>
+      <Link href='/' className="rounded-full bg-black text-white px-6 py-5 w-fit mx-auto">Contact Us</Link>
+        </div>
       <div className="w-[40rem] h-40 relative">
         {/* Gradients */}
         <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[3px] w-3/4 blur-sm" />

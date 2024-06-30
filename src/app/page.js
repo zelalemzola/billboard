@@ -75,7 +75,7 @@ export default function Home() {
     
            
     </div>
-    <div className='flex flex-col items-center md:hidden gap-3'>
+    <div className='flex flex-col items-center md:hidden gap-5 pt-6'>
       <div className="flex items-center rounded-full px-2 py-2 gap-2 bg-black text-white text-xl w-fit">
       <HandCoins color='white'/> Business Consultancy
       </div>

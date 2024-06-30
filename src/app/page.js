@@ -74,13 +74,13 @@ export default function Home() {
            
     </div>
     <div className='flex flex-col items-center md:hidden gap-3'>
-      <div className="flex items-center rounded-full px-2 py-2 gap-2 bg-black text-white w-fit">
+      <div className="flex items-center rounded-full px-2 py-2 gap-2 bg-black text-white text-lg w-fit">
       <HandCoins color='white'/> Business Consultancy
       </div>
-      <div className="flex items-center rounded-full px-2 py-2 gap-2 bg-black text-white w-fit">
+      <div className="flex items-center rounded-full px-2 py-2 gap-2 bg-black text-white text-lg w-fit">
       <TvMinimalPlay color='white' /> Digital Marketing
       </div>
-      <div className="flex items-center rounded-full px-2 py-2 gap-2 bg-black text-white w-fit">
+      <div className="flex items-center rounded-full px-2 py-2 gap-2 bg-black text-white text-lg w-fit">
       <Cpu  color='white'/> Tech Solutions
       </div>
     </div>

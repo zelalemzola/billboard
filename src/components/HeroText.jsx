@@ -10,7 +10,7 @@ const words = `Lets help you connect with successfull businesses in the game`;
  
 const HeroText = () => {
     return (
-        <div className="mx-auto md:mx-0 bg-white md:bg-transparent md:w-1/3 flex flex-col gap-3 items-start justify-start">
+        <div className="mx-auto md:mx-0 bg-white md:bg-transparent md:w-1/3 flex flex-col gap-3 items-start justify-start py-10 md:py-0">
         <div className='flex items-start gap-2'>
             <div className='flex items-center pt-2'>
                 <FontAwesomeIcon icon={faCircle} style={{color: "#000000",}} />

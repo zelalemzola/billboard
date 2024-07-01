@@ -22,7 +22,7 @@ const Contact = () => {
         <Link href='/contact' className='rounded-full hover:bg-black hover:text-white p-2 rounded-full'>Contact</Link>
         </div>
     </nav> 
-    <div className='py-20 text-center px-1'>
+    <div className='py-20 text-center '>
     <TextGenerateEffect words={words1} className='text-4xl'/>
     </div>
     {/* Radial gradient for the container to give a faded look */}
@@ -76,7 +76,7 @@ const Contact = () => {
       </PinContainer>
     </div>
     </div>
-    <div className="flex flex-col items-start gap-8 lg:hidden px-[80px]">
+    <div className="flex flex-col items-start gap-8 lg:hidden px-[90px]">
         <div className='flex items-center gap-2'>
         <FontAwesomeIcon icon={faPhone} size="2xl" style={{color: "#ffffff",}} className='rounded-full bg-black p-2' />
         <TextGenerateEffect words={wordsphone} />

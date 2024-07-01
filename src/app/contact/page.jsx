@@ -76,7 +76,7 @@ const Contact = () => {
       </PinContainer>
     </div>
     </div>
-    <div className="flex flex-col items-start gap-8 lg:hidden pl-[200px]">
+    <div className="flex flex-col items-start gap-8 lg:hidden pl-[100px]">
         <div className='flex items-center gap-2'>
         <FontAwesomeIcon icon={faPhone} size="2xl" style={{color: "#ffffff",}} className='rounded-full bg-black p-2' />
         <TextGenerateEffect words={wordsphone} />

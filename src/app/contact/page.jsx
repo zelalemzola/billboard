@@ -22,7 +22,7 @@ const Contact = () => {
         <Link href='/contact' className='rounded-full hover:bg-black hover:text-white p-2 rounded-full'>Contact</Link>
         </div>
     </nav> 
-    <div className='py-20 text-center'>
+    <div className='py-20 text-center px-2'>
     <TextGenerateEffect words={words1} className='text-4xl'/>
     </div>
     {/* Radial gradient for the container to give a faded look */}

@@ -8,7 +8,7 @@ import Link from 'next/link'
 import React from 'react'
 
 const Contact = () => {
-    const words1 = `Connect with us, Increase your Prescence!`;
+    const words1 = `Work with us, Increase your Presence!`;
     const wordsphone= `0988745721`
     const wordsfacebook= `facebook`
     const wordsinstagram= `instagram`

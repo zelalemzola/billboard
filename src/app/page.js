@@ -38,7 +38,7 @@ export default function Home() {
     <div className="w-full hidden md:flex items-end justify-between py-10 px-20">
       {/* <h1 className=" text-black text-2xl ">We offer <span className="text-secondary">services</span> designed <span className="text-gray-600">to optimize </span> your businesses <span className="text-gray-600">and achieve </span>your goals</h1> */}
        <ServiceText/>
-        <Link href='/' className='p-1 pl-3 rounded-full text-black bg-secondary text-lg flex items-center gap-2'>Learn more<FontAwesomeIcon icon={faCircleArrowLeft} size='2xl' className='rotIcon ' /></Link>
+        <Link href='/contact' className='p-1 pl-3 rounded-full text-white bg-black text-lg flex items-center gap-2'>Learn more<FontAwesomeIcon icon={faCircleArrowLeft} size='2xl'color='white' className='rotIcon ' /></Link>
     </div>
     <div className="md:hidden md:mx-auto flex flex-col gap-4 mb-4">
       <h1 className="text-black mx-auto py-10 text-2xl text-center">Our Services</h1>

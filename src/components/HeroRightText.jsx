@@ -12,7 +12,7 @@ const HeroRightText = () => {
      </div>
      <div className='flex flex-col items-center gap-8'>
         <h1 className='text-white'>Experience & Expertise</h1>
-        <p className='bg-secondary text-black p-2 rounded-full text-center'>Individual Approach</p>
+        <p className='bg-white text-black p-2 rounded-full text-center'>Individual Approach</p>
         <p className='text-white'>Supported by Innovation & Technology</p>
      </div>
     <BackgroundBeams />

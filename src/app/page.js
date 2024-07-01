@@ -26,7 +26,7 @@ export default function Home() {
         <div className=' flex items-center  text-black gap-4  p-2 border-2 border-black shadow-md mx-auto w-fit rounded-full '>
         <Link href='/' className='rounded-full hover:bg-black hover:text-white p-2 rounded-full'>Home</Link>
         <Link href='/' className='rounded-full hover:bg-black hover:text-white p-2 rounded-full'>Billboards</Link>
-        <Link href='/' className='rounded-full hover:bg-black hover:text-white p-2 rounded-full'>Contact</Link>
+        <Link href='/contact' className='rounded-full hover:bg-black hover:text-white p-2 rounded-full'>Contact</Link>
         </div>
     </nav>
     <div className="pt-[45%] md:pt-[20%] px-[5%] flex items-center justify-between">
@@ -87,7 +87,7 @@ export default function Home() {
       </div>
     </div>
    </div>
-   <div className="md:h-screen bg-white flex flex-col pb-[160px] ">
+   <div className="h-screen bg-white flex flex-col pb-[160px] ">
     <HeroBottom/>
 
    </div>

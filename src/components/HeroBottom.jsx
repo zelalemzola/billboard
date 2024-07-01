@@ -10,7 +10,7 @@ export function HeroBottom() {
       <h1 className="md:text-3xl text-2xl lg:text-4xl font-bold text-center text-black relative z-20 pt-40">
        Connect with us, Increase your Prescence !
       </h1>
-      <Link href='/' className="rounded-full bg-black text-white px-6 py-5 w-fit mx-auto">Contact Us</Link>
+      <Link href='/contact' className="rounded-full bg-black text-white px-6 py-5 w-fit mx-auto">Contact Us</Link>
         </div>
       <div className="w-[40rem] h-40 relative rounded-b-full">
         {/* Gradients */}

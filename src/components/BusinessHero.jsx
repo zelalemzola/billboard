@@ -7,32 +7,32 @@ export function BusinessHero() {
   const words = [
     {
       text: "The",
-      className: "text-4xl",
+      className: "text-4xl sm:text-3xl",
     },
     {
       text: "right",
-      className: "text-4xl",
+      className: "text-4xl sm:text-3xl",
     },
     {
       text: "destination",
-      className: "text-4xl",
+      className: "text-4xl sm:text-3xl",
     },
     {
       text: "to",
-      className: "text-4xl",
+      className: "text-4xl sm:text-3xl",
     },
     {
       text: "find",
-      className: "text-4xl",
+      className: "text-4xl sm:text-3xl",
 
     },
     {
       text: "Striving",
-      className: "text-secondary dark:text-secondary text-5xl",
+      className: "text-secondary dark:text-secondary text-5xl sm:text-4xl",
     },
     {
       text: "Businesses.",
-      className: "text-secondary dark:text-secondary text-5xl",
+      className: "text-secondary dark:text-secondary text-5xl sm:text-4xl",
     },
   ];
   return (

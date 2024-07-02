@@ -63,7 +63,7 @@ const BusinessDetail = () => {
     <div className="container mx-auto p-4 pt-[100px]">
       <div className="border rounded-lg overflow-hidden p-3">
        <div className='flex gap-4'>
-        <div className=' w-1/2 relative'>
+        <div className='w-full lg:w-1/2 relative'>
         <Image
           src={business.bannerImageUrl}
           alt={business.name}

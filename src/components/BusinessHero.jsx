@@ -15,28 +15,28 @@ export function BusinessHero() {
     },
     {
       text: "destination",
-      className: "text-4xl sm:text-3xl",
+      className: "text-4xl sm:text-2xl",
     },
     {
       text: "to",
-      className: "text-4xl sm:text-3xl",
+      className: "text-4xl sm:text-2xl",
     },
     {
       text: "find",
-      className: "text-4xl sm:text-3xl",
+      className: "text-4xl sm:text-2xl",
 
     },
     {
       text: "Striving",
-      className: "text-secondary dark:text-secondary text-5xl sm:text-4xl",
+      className: "text-secondary dark:text-secondary text-5xl sm:text-3xl",
     },
     {
       text: "Businesses.",
-      className: "text-secondary dark:text-secondary text-5xl sm:text-4xl",
+      className: "text-secondary dark:text-secondary text-5xl sm:text-3xl",
     },
   ];
   return (
-    <div className="flex flex-col items-center justify-center h-[75vh] p-2">
+    <div className="flex flex-col items-center justify-center h-[70vh] p-2">
       <p className="text-black  text-2xl  mb-10">
        Let us help pair you with the right candidates !
       </p>

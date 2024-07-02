@@ -7,32 +7,32 @@ export function BusinessHero() {
   const words = [
     {
       text: "The",
-      className: "sm:text-3xl",
+      className: "text-4xl",
     },
     {
       text: "right",
-      className: "sm:text-3xl",
+      className: "text-4xl",
     },
     {
       text: "destination",
-      className: "sm:text-3xl",
+      className: "text-4xl",
     },
     {
       text: "to",
-      className: "sm:text-3xl",
+      className: "text-4xl",
     },
     {
       text: "find",
-      className: "sm:text-3xl",
+      className: "text-4xl",
 
     },
     {
       text: "Striving",
-      className: "text-blue-500 dark:text-blue-500 sm:text-3xl",
+      className: "text-blue-500 dark:text-blue-500 text-5xl",
     },
     {
       text: "Businesses.",
-      className: "text-blue-500 dark:text-blue-500 sm:text-3xl",
+      className: "text-blue-500 dark:text-blue-500 text-5xl",
     },
   ];
   return (
@@ -43,7 +43,7 @@ export function BusinessHero() {
       <TypewriterEffect words={words} />
       <div className="flex flex-col items-center  md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-4 mt-10">
        <p className="text-xl">For further assistance you may reach us via</p>
-        <Link className="bg-black px-3 py-3 rounded-full text-white text-xl" href='/contact'>
+        <Link className="bg-blue-500 px-3 py-3 rounded-full text-white text-xl" href='/contact'>
           Contact us
         </Link>
       </div>

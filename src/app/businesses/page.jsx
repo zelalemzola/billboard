@@ -71,7 +71,7 @@ const Businesses = () => {
       </div>
     <div className="container mx-auto lg:p-8 pb-[160px]">
       <div className="flex flex-col md:flex-row gap-8 items-center mb-[80px] justify-center">
-        <div className="flex items-center w-[60%]  mb-2 md:mb-0 bg-blue-500 p-2 px-4 rounded-full">
+        <div className="flex items-center w-[60%] sm:w-full  mb-2 md:mb-0 bg-blue-500 p-2 px-4 rounded-full">
           <Search className="text-primary mr-2 font-bold" color="white" />
           <Input
             type="text"

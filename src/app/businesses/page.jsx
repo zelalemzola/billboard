@@ -5,16 +5,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Search, ChevronsUpDown, Check } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { Eye, Search, ThumbsUp } from "lucide-react";
 import BusinessHero from "@/components/BusinessHero";
 
-// Utility to fetch data with ISR (Incremental Static Regeneration)
 const fetchBusinessesISR = async (category, search) => {
   const response = await fetch(
     `/api/businesses?category=${category}&search=${search}`,
     {
-      next: { revalidate: 10 }, // Revalidate the cached data every 10 seconds
+      next: { revalidate: 10 },
     }
   );
   const data = await response.json();
@@ -26,7 +24,6 @@ const Businesses = () => {
   const [categories, setCategories] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
-  const [filterTerm, setFilterTerm] = useState("");
 
   useEffect(() => {
     fetchBusinesses();
@@ -54,15 +51,12 @@ const Businesses = () => {
 
   const filteredBusinesses = businesses.filter((business) => {
     const matchesSearch = business.name.toLowerCase().includes(searchTerm.toLowerCase());
-    
     if (!selectedCategory) {
       return matchesSearch;
     } else {
-      // Check if the business's category matches the selected category ID
       return business.category && business.category._id === selectedCategory && matchesSearch;
     }
   });
-  
 
   return (
     <div className="flex flex-col">
@@ -85,7 +79,7 @@ const Businesses = () => {
           </Link>
         </div>
       </nav>
-      <div className="pt-[15%] lg:pt-[8%] flex flex-col gap-2  fixed w-full mx-auto z-20 bg-black text-white border-b shadow-md rounded-br-2xl dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-blue-500/[0.2]   ">
+      <div className="pt-[15%] lg:pt-[8%] flex flex-col gap-2 fixed w-full mx-auto z-20 bg-black text-white border-b shadow-md rounded-br-2xl dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-blue-500/[0.2]">
         <BusinessHero />
         <div className="flex flex-col md:flex-row gap-4 lg:gap-8 items-center mb-[20px] justify-center">
           <div className="flex items-center lg:w-[60%] w-full mb-2 md:mb-0 bg-secondary p-2 px-4 rounded-full">
@@ -111,14 +105,11 @@ const Businesses = () => {
                 </option>
               ))}
             </select>
-           
           </div>
         </div>
       </div>
-      <div className="container mx-auto lg:p-8 pb-[160px]">
-        
-
-        <div className="flex flex-wrap place-items-start justify-center gap-2">
+      <div className="container mx-auto lg:p-8 pb-[160px] pt-[60%] ">
+        <div className="flex flex-wrap place-items-start justify-center gap-2 lg:pt-[19%]">
           {filteredBusinesses.length > 0 ? (
             filteredBusinesses.map((business) => (
               <div key={business._id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 rounded-lg">
@@ -131,8 +122,12 @@ const Businesses = () => {
                       height={300}
                       className="w-full h-48 object-cover"
                     />
-                    <div className="p-4">
+                    <div className="p-4 flex flex-wrap justify-between">
                       <h2 className="text-lg font-bold">{business.name}</h2>
+                     <div className='flex flex-wrap justify-between gap-2'>
+                      <p className="text-black flex items-center"><ThumbsUp size='14' color="gray"/>: {business.likes}</p>
+                      <p className="text-black flex items-center"> <Eye size='14' color="gray"/>: {business.clicks}</p>
+                      </div>
                     </div>
                   </div>
                 </Link>

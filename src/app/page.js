@@ -40,36 +40,36 @@ export default function Home() {
        <ServiceText/>
         <Link href='/contact' className='p-1 pl-3 rounded-full text-white bg-black text-lg flex items-center gap-2'>Learn more<FontAwesomeIcon icon={faCircleArrowLeft} size='2xl'color='white' className='rotIcon ' /></Link>
     </div>
-    <div className="md:hidden md:mx-auto flex flex-col gap-4 mb-4">
+    <div className="md:hidden md:mx-auto flex flex-col gap-4 mb-8">
       <h1 className="text-black mx-auto py-10 text-2xl text-center">Our Services</h1>
       <ServiceSmallText/>
     </div>
     <div className="w-full hidden md:flex flex-col md:flex-row items-center gap-4 px-20 ">
-      <Card className='bg-black text-white h-[350px] w-[350px] rounded-2xl'>
+      <Card className=' text-black h-[350px] w-[350px] rounded-2xl shadow-md'>
        <div className='px-3 pt-2'>
        <CardContent className='card1 h-[280px] rounded-2xl'>
        </CardContent>
       </div>
        <CardFooter className=''>
-        <h1 className=" text-white text-xl my-5">Business Consultancy</h1>
+        <h1 className=" text-black text-xl my-5">Business Consultancy</h1>
        </CardFooter>
      </Card>
-      <Card className='bg-black text-white h-[350px] w-[350px] rounded-2xl'>
+      <Card className=' text-black h-[350px] w-[350px] rounded-2xl shadow-md'>
        <div className='px-3 pt-2'>
        <CardContent className='card2 h-[280px] rounded-2xl'>
        </CardContent>
       </div>
        <CardFooter className=''>
-        <h1 className=" text-white text-xl my-5">Digital Marketing</h1>
+        <h1 className=" text-black text-xl my-5">Digital Marketing</h1>
        </CardFooter>
      </Card>
-      <Card className='bg-black text-white h-[350px] w-[350px] rounded-2xl'>
+      <Card className=' text-black h-[350px] w-[350px] rounded-2xl shadow-md'>
        <div className='px-3 pt-2'>
        <CardContent className='card3 h-[280px] rounded-2xl'>
        </CardContent>
       </div>
        <CardFooter className=''>
-        <h1 className=" text-white text-xl my-5">Tech Solutions</h1>
+        <h1 className=" text-black text-xl my-5">Tech Solutions</h1>
        </CardFooter>
      </Card>
     

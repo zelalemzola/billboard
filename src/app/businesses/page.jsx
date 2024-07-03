@@ -85,11 +85,9 @@ const Businesses = () => {
           </Link>
         </div>
       </nav>
-      <div className="pt-[1%]">
+      <div className="pt-[10%] lg:pt-[8%] flex flex-col gap-3  fixed w-full mx-auto z-20 bg-black text-white border-b shadow-md rounded-br-2xl dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-blue-500/[0.2]   ">
         <BusinessHero />
-      </div>
-      <div className="container mx-auto lg:p-8 pb-[160px]">
-        <div className="flex flex-col md:flex-row gap-8 items-center mb-[80px] justify-center">
+        <div className="flex flex-col md:flex-row gap-8 items-center mb-[20px] justify-center">
           <div className="flex items-center lg:w-[60%] w-full mb-2 md:mb-0 bg-secondary p-2 px-4 rounded-full">
             <Search className="text-primary mr-2 font-bold" color="white" />
             <Input
@@ -116,6 +114,9 @@ const Businesses = () => {
            
           </div>
         </div>
+      </div>
+      <div className="container mx-auto lg:p-8 pb-[160px]">
+        
 
         <div className="flex flex-wrap place-items-start justify-center gap-2">
           {filteredBusinesses.length > 0 ? (

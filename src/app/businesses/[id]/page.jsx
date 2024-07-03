@@ -148,7 +148,7 @@ const BusinessDetail = () => {
                 </div>
               ))}
             </div>
-            <div className='flex items-center gap-4 mt-4 absolute top-0 :right-0  p-4 pt-[50%] lg:pt-4'>
+            <div className='w-full lg:w-fit flex items-center gap-4 mt-4 lg:absolute lg:top-0 lg:right-0  p-4 '>
            
               <button 
                 className="bg-secondary text-white px-4 py-2 rounded-full hover:bg-red-500 active:bg-red-500"

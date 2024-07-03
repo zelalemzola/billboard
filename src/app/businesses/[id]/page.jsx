@@ -151,7 +151,7 @@ const BusinessDetail = () => {
             <div className='w-full lg:w-fit mt-4 lg:absolute lg:top-0 lg:right-0  p-4 '>
            
               <button 
-                className="bg-secondary text-white px-4 py-2 rounded-full hover:bg-red-500 active:bg-red-500 w-full"
+                className="bg-secondary text-white px-4 py-2 rounded-full hover:bg-red-500 active:bg-red-500 w-full text-center lg:w-fit "
                 onClick={handleLike}
               >
                <Heart />

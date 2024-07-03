@@ -5,9 +5,16 @@ import Link from "next/link";
 import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { Eye, Search, ThumbsUp } from "lucide-react";
+import { Eye, Search, SlidersHorizontal, ThumbsUp } from "lucide-react";
 import BusinessHero from "@/components/BusinessHero";
-
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 const fetchBusinessesISR = async (category, search) => {
   const response = await fetch(
     `/api/businesses?category=${category}&search=${search}`,
@@ -86,25 +93,27 @@ const Businesses = () => {
             <Search className="text-primary mr-2 font-bold" color="white" />
             <Input
               type="text"
-              className="w-full"
+              className="w-full text-black"
               placeholder="Search businesses..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
-          <div className="flex items-center">
-            <select
-              className="bg-secondary text-white px-4 py-2 rounded-full"
+          <div className="">
+    
+              <select
+              className="bg-secondary text-white px-4 py-2 rounded-full w-[180px]"
               value={selectedCategory}
               onChange={handleCategoryChange}
             >
               <option value="">All Categories</option>
               {categories.map((category) => (
-                <option key={category._id} value={category._id}>
+                <option key={category._id} value={category._id} className="">
                   {category.name}
                 </option>
               ))}
             </select>
+           
           </div>
         </div>
       </div>

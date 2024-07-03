@@ -109,7 +109,7 @@ const Businesses = () => {
         </div>
       </div>
       <div className="container mx-auto lg:p-8 pb-[160px] pt-[60%] ">
-        <div className="flex flex-wrap place-items-start justify-center gap-2 lg:pt-[19%]">
+        <div className="flex flex-wrap place-items-start justify-center gap-2 pt-[19%]">
           {filteredBusinesses.length > 0 ? (
             filteredBusinesses.map((business) => (
               <div key={business._id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 rounded-lg">

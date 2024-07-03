@@ -79,7 +79,7 @@ const Businesses = () => {
           </Link>
         </div>
       </nav>
-      <div className="pt-[15%] lg:pt-[8%] flex flex-col gap-2 fixed w-full mx-auto z-20 bg-black text-white border-b shadow-md rounded-br-2xl dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-blue-500/[0.2]">
+      <div className="pt-[15%] lg:pt-[8%] flex flex-col gap-2 fixed w-full mx-auto z-20 bg-black text-white border-b shadow-md rounded-b-2xl dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-blue-500/[0.2]">
         <BusinessHero />
         <div className="flex flex-col md:flex-row gap-4 lg:gap-8 items-center mb-[20px] justify-center">
           <div className="flex items-center w-[95%] lg:w-[60%]  mb-2 md:mb-0 bg-secondary p-2 px-4 rounded-full">

@@ -81,10 +81,19 @@ const BusinessDetail = () => {
           </Link>
         </div>
       </nav>
-      <div className="container mx-auto p-4 pt-[100px] ">
-        <div className="border rounded-lg overflow-hidden p-3 relative">
-          <div className='flex gap-4'>
-            <div className='w-full lg:w-1/2 relative'>
+      <div className='p-6 m-4'>
+      <div className='container  px-[10%] py-[5%] flex flex-col gap-8 shadow-xl rounded-2xl border '>
+           <div className='flex items-center justify-between'>
+             <h1 className="text-2xl font-bold text-secondary">{business.name}</h1> 
+             <button 
+                className=" bg-secondary text-white px-4 py-2 rounded-full hover:bg-red-500 active:bg-red-500 hidden lg:flex items-center justify-center :w-fit "
+                onClick={handleLike}
+              >
+               <Heart />
+              </button>
+           </div>
+            <div className='flex flex-wrap gap-10'>
+            <div className='w-full lg:w-[60%] relative p-2 rounded-2xl border shadow-xl'>
               <Image
                 src={business.bannerImageUrl}
                 alt={business.name}
@@ -94,23 +103,26 @@ const BusinessDetail = () => {
               />
               <p className='absolute top-0 right-0 bg-secondary text-white rounded-full p-1 m-2'>{business.category.name}</p>
             </div>
-            <div className='hidden lg:flex flex-col gap-2 px-6'>
-              <div className='hidden lg:flex items-center gap-2'>
-                <p className='text-xl text-secondary'>Name : </p>
-                <h1 className="text-2xl font-bold">{business.name}</h1>
-              </div>
-              <h2 className="text-xl font-bold mt-4 text-secondary">Our Locations</h2>
+            <div className='flex flex-col gap-4 items-center '>
+            <div className='flex flex-col px-5 py-4 rounded-2xl border w-fit h-fit shadow-lg'>
+            <h2 className="text-xl font-bold mt-4 text-secondary text-center">Our Locations</h2>
               {business.locations.map((location, index) => (
-                <div key={index} className="mb-2 flex flex-wrap gap-2 items-center">
-                  <p className="font-semibold text-secondary">Address:</p>
-                  <p>{location.address}</p>
-                  <p className="font-semibold text-secondary">Contact:</p>
-                  <p>{location.contact}</p>
+                <div key={index} className="mb-2 pt-4  flex flex-wrap gap-6 items-center">
+                  <div className='flex items-center gap-2'> 
+                    <p className="font-semibold text-secondary">Address:</p>
+                    <p>{location.address}</p>
+                  </div> 
+                 <div className='flex items-center gap-2'>
+                    <p className="font-semibold text-secondary">Contact:</p>
+                    <p>{location.contact}</p>
+                  </div>
                 </div>
               ))}
-              <h2 className="text-xl font-bold mt-4 text-secondary">Social Media</h2>
+            </div>
+            <div className='flex flex-col px-8 py-4 rounded-2xl border w-fit h-fit shadow-lg'>
+            <h2 className="text-xl font-bold mt-4 text-secondary text-center">Social Media</h2>
               {business.socialMedias.map((socialMedia, index) => (
-                <div key={index} className="mb-2 flex items-center flex-wrap gap-2">
+                <div key={index} className="mb-2 flex items-center flex-wrap gap-2 pt-4">
                   <p className="font-semibold">{socialMedia.name} :</p>
                   <a href={socialMedia.link} target="_blank" rel="noopener noreferrer" className="text-teal-500">
                     {socialMedia.link}
@@ -118,48 +130,23 @@ const BusinessDetail = () => {
                 </div>
               ))}
             </div>
-          </div>
-          <div className="p-4">
-            <div className='flex items-center gap-2 lg:hidden'>
-              <p className='text-xl text-secondary'>Name : </p>
-              <h1 className="text-2xl font-bold">{business.name}</h1>
             </div>
-            <div className='flex flex-col gap-2'>
+            </div>
+            <div className='flex flex-col gap-2 border rounded-2xl shadow-xl px-3 py-4'>
               <p className='text-xl text-secondary'>Details : </p>
               <p className="text-gray-600">{business.details}</p>
             </div>
-            <div className='flex flex-col gap-2 lg:hidden'>
-              <h2 className="text-xl font-bold mt-4 text-secondary">Our Locations</h2>
-              {business.locations.map((location, index) => (
-                <div key={index} className="mb-2 flex flex-wrap gap-2 items-center">
-                  <p className="font-semibold text-secondary">Address:</p>
-                  <p>{location.address}</p>
-                  <p className="font-semibold text-secondary">Contact:</p>
-                  <p>{location.contact}</p>
-                </div>
-              ))}
-              <h2 className="text-xl font-bold mt-4 text-secondary">Social Media</h2>
-              {business.socialMedias.map((socialMedia, index) => (
-                <div key={index} className="mb-2 flex items-center flex-wrap gap-2">
-                  <p className="font-semibold">{socialMedia.name} :</p>
-                  <a href={socialMedia.link} target="_blank" rel="noopener noreferrer" className="text-teal-500">
-                    {socialMedia.link}
-                  </a>
-                </div>
-              ))}
-            </div>
-            <div className='w-full lg:w-fit mt-4 lg:absolute lg:top-0 lg:right-0  p-4 '>
-           
-              <button 
-                className="bg-secondary text-white px-4 py-2 rounded-full hover:bg-red-500 active:bg-red-500 w-full flex items-center justify-center lg:w-fit "
+            <div className ='w-full lg:hidden'>
+            <button 
+                className="bg-secondary text-white px-4 py-2 rounded-full hover:bg-red-500 active:bg-red-500 w-full flex items-center justify-center  "
                 onClick={handleLike}
               >
                <Heart />
               </button>
             </div>
-          </div>
-        </div>
       </div>
+      </div>
+
     </div>
   );
 };

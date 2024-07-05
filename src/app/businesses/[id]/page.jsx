@@ -83,7 +83,7 @@ const BusinessDetail = () => {
       </nav>
       <div className='p-3 m-3 mt-10 lg:p-6 lg:m-6' >
       <div className='container px-[5%] py-[10%] lg:px-[10%] lg:py-[5%] flex flex-col gap-8 shadow-xl rounded-2xl border '>
-           <div className='flex items-center justify-between'>
+           <div className='flex items-center justify-between pt-[5%]'>
              <h1 className="text-2xl font-bold text-secondary">{business.name}</h1> 
              <button 
                 className=" bg-secondary text-white px-4 py-2 rounded-full hover:bg-red-500 active:bg-red-500 hidden lg:flex items-center justify-center :w-fit "

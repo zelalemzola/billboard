@@ -101,7 +101,7 @@ const BusinessDetail = () => {
                 height={400}
                 className="w-full lg:w-full object-contain rounded-lg border"
               />
-              <p className='absolute top-0 right-0 bg-secondary text-white rounded-full p-1 m-2'>{business.category.name}</p>
+              <p className='absolute top-0 right-0 bg-secondary text-white rounded-full p-1 m-2 '>{business.category.name.split(' ')[0]}</p>
             </div>
             <div className='flex flex-col gap-4 items-center '>
             <div className='flex flex-col px-5 py-4 rounded-2xl border w-fit h-fit shadow-lg'>

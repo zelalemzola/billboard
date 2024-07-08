@@ -134,7 +134,7 @@ const BusinessDetail = () => {
             </div>
             <div className='flex flex-col gap-2 border rounded-2xl shadow-xl px-3 py-4'>
               <p className='text-xl text-secondary'>Details : </p>
-              <div dangerouslySetInnerHTML={{ __html: business.details }} className="text-gray-600" />
+              <div dangerouslySetInnerHTML={{ __html: business.details }} className="" />
             </div>
             <div className ='w-full lg:hidden'>
             <button 

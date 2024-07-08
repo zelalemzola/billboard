@@ -134,7 +134,7 @@ const BusinessDetail = () => {
             </div>
             <div className='flex flex-col gap-2 border rounded-2xl shadow-xl px-3 py-4'>
               <p className='text-xl text-secondary'>Details : </p>
-              <p className="text-gray-600">{business.details}</p>
+              <div dangerouslySetInnerHTML={{ __html: business.details }} className="text-gray-600" />
             </div>
             <div className ='w-full lg:hidden'>
             <button 
@@ -152,3 +152,4 @@ const BusinessDetail = () => {
 };
 
 export default BusinessDetail;
+

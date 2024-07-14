@@ -2,6 +2,9 @@
   @tailwind components;
   @tailwind utilities;
 
+  :root,html,body{
+    height: 100%;
+  }
   @layer base {
     :root {
       --background: 0 0% 100%;
@@ -108,3 +111,18 @@
   .no-visible-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  .bid h1,h2,h3{
+    text-align: center;
+    color: var(--primary);
+    font-weight: bolder;
+    font-size: x-large;
+
+  }
+
+  .bid a{
+    color: rgb(14, 184, 184);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+  

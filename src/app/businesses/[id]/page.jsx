@@ -5,7 +5,9 @@ import Image from 'next/image';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { Heart } from 'lucide-react';
+import {  Lora, Roboto_Slab } from 'next/font/google';
 
+const inter = Lora({ subsets: ["latin"]  });
 const BusinessDetail = () => {
   const { id } = useParams();
   const [business, setBusiness] = useState(null);
@@ -58,7 +60,7 @@ const BusinessDetail = () => {
   }
 
   return (
-    <div>
+    <div className={inter.className}>
       <nav className="fixed w-full p-3 z-30">
         <div className="flex items-center bg-white text-black gap-4 p-2 border-1 border-secondary shadow-md mx-auto w-fit rounded-full">
           <Link
@@ -133,8 +135,8 @@ const BusinessDetail = () => {
             </div>
             </div>
             <div className='flex flex-col gap-2 border rounded-2xl shadow-xl px-3 py-4'>
-              <p className='text-xl text-secondary'>Details : </p>
-              <div dangerouslySetInnerHTML={{ __html: business.details }} className="" />
+              <p className='text-xl text-secondary font-bold'>Details : </p>
+              <div dangerouslySetInnerHTML={{ __html: business.details }} className="bid" />
             </div>
             <div className ='w-full lg:hidden'>
             <button 

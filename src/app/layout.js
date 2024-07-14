@@ -1,6 +1,5 @@
 import { Yeseva_One } from "next/font/google";
-import '@mantine/tiptap/styles.css';
-import '@mantine/core/styles.css';
+
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 

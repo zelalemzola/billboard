@@ -17,13 +17,13 @@ const Contact = () => {
     <div className="h-screen w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-slate-900/[0.2] relative ">
    <nav className='fixed w-full  p-3'>
         <div className=' flex items-center  text-black gap-4  p-2 border-2 border-black shadow-md mx-auto  w-fit rounded-full z-30'>
-        <Link href='/' className='rounded-full hover:bg-black hover:text-white p-2 rounded-full'>Home</Link>
-        <Link href='/businesses' className='rounded-full hover:bg-black hover:text-white p-2 rounded-full'>Billboards</Link>
-        <Link href='/contact' className='rounded-full hover:bg-black hover:text-white p-2 rounded-full'>Contact</Link>
+        <Link href='/' className='rounded-full hover:bg-slate-900 hover:text-white p-2 rounded-full'>Home</Link>
+        <Link href='/businesses' className='rounded-full hover:bg-slate-900 hover:text-white p-2 rounded-full'>Billboards</Link>
+        <Link href='/contact' className='rounded-full hover:bg-slate-900 hover:text-white p-2 rounded-full'>Contact</Link>
         </div>
     </nav> 
     <div className='py-20 text-center px-1'>
-    <TextGenerateEffect words={words1} className='text-4xl'/>
+    <TextGenerateEffect words={words1} className='text-xl'/>
     </div>
     {/* Radial gradient for the container to give a faded look */}
     <div className='hidden lg:flex items-center px-[200px]  gap-[200px] pt-[100px]'>
@@ -31,9 +31,9 @@ const Contact = () => {
       <PinContainer
         title="0988745721"
         href="/"
-    
+       
       >
-       <div className='rounded-full'>
+       <div className='rounded-full '>
         
        <FontAwesomeIcon icon={faPhone} size="2xl" style={{color: "#ffffff",}} className='' />
        </div>

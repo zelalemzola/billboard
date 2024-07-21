@@ -40,7 +40,7 @@ export default function Home() {
     </div>
    </main>
    <div className="h-screen w-full flex flex-col-reverse md:flex-row items-center justify-evenly md:justify-between px-2 md:px-6 py-10 ">
-     <h1 className=" w-[90%] md:w-1/2 text-2xl text-center mx-auto">Having the Previlege to access a platform that specifically advertizes businesses help&apos;s your business Meet the right <FlipWords words={words1}/><br/> and Grow Your Business  <FlipWords words={words2}/>  </h1>
+     <h1 className=" w-[90%] md:w-1/2 text-xl md:text-2xl text-center mx-auto flex items-center flex-wrap">Having the Previlege to access a platform that specifically advertizes businesses help&apos;s your business Meet the right <FlipWords words={words1}/><br/> and Grow Your Business  <FlipWords words={words2}/>  </h1>
      <Image src='/hero.svg' alt='hero desc' width={100} height={100} className="w-[70%] md:w-[40%] "/>
    </div>
    <div className="bg-white  md:h-screen p-10 pt-[70px]" >

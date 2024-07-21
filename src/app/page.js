@@ -56,7 +56,7 @@ export default function Home() {
       <h1 className="text-black mx-auto py-10 text-3xl font-bold text-center">Our Services</h1>
       <ServiceSmallText/>
     </div>
-    <div className="w-full hidden md:flex flex-col md:flex-row items-center gap-4 px-20 ">
+    <div className="w-full hidden md:flex  md:flex-row items-center justify-center gap-4 px-20 ">
     <Card className='bg-slate-900 text-white h-[350px] w-[350px] rounded-2xl shadow-md'>
        <div className='px-3 pt-2'>
        <CardContent className='card1 h-[280px] rounded-2xl'>

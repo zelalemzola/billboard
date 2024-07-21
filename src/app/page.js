@@ -16,6 +16,8 @@ import HeroBottom from "@/components/HeroBottom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import ServiceSmallText from "@/components/ServiceSmallText";
+import { Button } from "@/components/ui/button";
+import HeroFooter from "@/components/HeroFooter";
 
 export default function Home() {
   return (
@@ -38,38 +40,41 @@ export default function Home() {
     <div className="w-full hidden md:flex items-end justify-between py-10 px-20">
       {/* <h1 className=" text-black text-2xl ">We offer <span className="text-secondary">services</span> designed <span className="text-gray-600">to optimize </span> your businesses <span className="text-gray-600">and achieve </span>your goals</h1> */}
        <ServiceText/>
-        <Link href='/contact' className='p-1 pl-3 rounded-full text-white bg-black text-lg flex items-center gap-2'>Learn more<FontAwesomeIcon icon={faCircleArrowLeft} size='2xl'color='white' className='rotIcon ' /></Link>
+       <Button className='bg-slate-900 rounded-full flex items-center gap-2'>
+        <Link href='/contact' className='text-white text-lg'>Learn more</Link>
+        <FontAwesomeIcon icon={faCircleArrowLeft} size='xl'color='white' className='rotIcon ' />
+    </Button>
     </div>
     <div className="md:hidden md:mx-auto flex flex-col gap-4 mb-8">
       <h1 className="text-black mx-auto py-10 text-2xl text-center">Our Services</h1>
       <ServiceSmallText/>
     </div>
     <div className="w-full hidden md:flex flex-col md:flex-row items-center gap-4 px-20 ">
-      <Card className=' text-black h-[350px] w-[350px] rounded-2xl shadow-md'>
+    <Card className='bg-slate-900 text-white h-[350px] w-[350px] rounded-2xl shadow-md'>
        <div className='px-3 pt-2'>
        <CardContent className='card1 h-[280px] rounded-2xl'>
        </CardContent>
       </div>
        <CardFooter className=''>
-        <h1 className=" text-black text-xl my-5">Business Consultancy</h1>
+        <h1 className=" text-white text-xl my-5"> Business Consultancy</h1>
        </CardFooter>
      </Card>
-      <Card className=' text-black h-[350px] w-[350px] rounded-2xl shadow-md'>
+      <Card className='bg-slate-900 text-white h-[350px] w-[350px] rounded-2xl shadow-md'>
        <div className='px-3 pt-2'>
        <CardContent className='card2 h-[280px] rounded-2xl'>
        </CardContent>
       </div>
        <CardFooter className=''>
-        <h1 className=" text-black text-xl my-5">Digital Marketing</h1>
+        <h1 className=" text-white text-xl my-5">Digital Marketing</h1>
        </CardFooter>
      </Card>
-      <Card className=' text-black h-[350px] w-[350px] rounded-2xl shadow-md'>
+      <Card className='bg-slate-900 text-white h-[350px] w-[350px] rounded-2xl shadow-md'>
        <div className='px-3 pt-2'>
        <CardContent className='card3 h-[280px] rounded-2xl'>
        </CardContent>
       </div>
        <CardFooter className=''>
-        <h1 className=" text-black text-xl my-5">Tech Solutions</h1>
+        <h1 className=" text-white text-xl my-5">Tech Solutions</h1>
        </CardFooter>
      </Card>
     
@@ -91,6 +96,7 @@ export default function Home() {
     <HeroBottom/>
 
    </div>
+   <HeroFooter/>
    </>
   );
 }

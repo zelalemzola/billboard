@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons';
 const HeroRightText = () => {
   return (
-    <div className="  h-[300px]  py-5 px-1 rounded-3xl bg-neutral-950 relative flex flex-col items-center justify-center gap-4 antialiased">
+    <div className="  h-[300px]  py-5 px-1 rounded-3xl bg-slate-900 relative flex flex-col items-center justify-center gap-4 antialiased">
      <div className='flex items-center'>
      <FontAwesomeIcon icon={faCircle} style={{color: "white",}} />
      <FontAwesomeIcon icon={faCircle} style={{color: "white",}} />

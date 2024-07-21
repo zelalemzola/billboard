@@ -6,7 +6,7 @@ import { faCircle, faCircleArrowLeft, faCircleArrowUp, faCircleArrowUpLeft, faPh
 import { Button } from './ui/button';
 import Link from 'next/link';
 
-const words = `Lets help you connect with successfull businesses in the game`;
+const words = `Connect and Collaborate with Successfull Businesses All around the World`;
  
 const HeroText = () => {
     return (
@@ -19,8 +19,14 @@ const HeroText = () => {
             </div>
         <p className="text-gray-600 text-justify">We also offer innovative solutions and techniques based on years of experience working with various companies.</p>
         <div className='flex flex-wrap items-center gap-2'>
-            <Link href='/businesses' className='bg-black rounded-full text-white text-lg shadow-sm p-1 pl-2 flex items-center gap-2'>Discover our works   <FontAwesomeIcon icon={faCircleArrowLeft} size='2xl' className='rotIcon ' color='white'/></Link>
-            <Link href='/contact' className='border bg-black text-white  p-1 pl-2 rounded-full flex items-center gap-2 text-lg'>Get a call<FontAwesomeIcon icon={faPhone} size="lg" color='black' className='bg-white p-1 rounded-full'/></Link>
+            <Button className='flex items-center gap-2 rounded-full bg-slate-900 pr-0 py-1'>
+            <Link href='/businesses' className=' text-white text-lg '>Discover our works</Link>
+            <FontAwesomeIcon icon={faCircleArrowLeft} size='xl' className='rotIcon p-1' color='white'/>
+            </Button>
+            <Button className='flex items-center gap-2 rounded-full bg-slate-900 pr-0 py-1 pr-1'>
+            <Link href='/contact' className='  text-white text-lg'>Call</Link>
+            <FontAwesomeIcon icon={faPhone} size="xl" color='black' className='bg-white p-1 rounded-full'/>
+            </Button>
         </div>
         </div>
 

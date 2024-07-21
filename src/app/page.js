@@ -18,8 +18,11 @@ import { faCircleArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import ServiceSmallText from "@/components/ServiceSmallText";
 import { Button } from "@/components/ui/button";
 import HeroFooter from "@/components/HeroFooter";
+import { FlipWords } from "@/components/ui/flip-words";
 
 export default function Home() {
+  const words1 = ["Partner", "Distributor", "Investor", "Customer Base"];
+  const words2 = ["10X", "20X", "30X", "40X ","50X","60X","70X","80X","90X","100X"];
   return (
     <>
    <main className="bg-cover bg-center md:h-screen" id="main" >
@@ -36,6 +39,10 @@ export default function Home() {
       <div className="pl-[80px] w-1/3 hidden md:flex"><HeroRightText/></div>
     </div>
    </main>
+   <div className="h-screen w-full flex items-center justify-between px-2 md:px-6 py-10">
+     <h1 className=" w-[90%] md:w-1/2 text-2xl text-center mx-auto">Having the Previlege to access a platform that specifically advertizes businesses help&apos;s your business Meet the right <FlipWords words={words1}/><br/> and Grow Your Business  <FlipWords words={words2}/>  </h1>
+     <Image src='/hero.svg' alt='hero desc' width={100} height={100} className="w-[40%] hidden md:block"/>
+   </div>
    <div className="bg-white  md:h-screen p-10 pt-[70px]" >
     <div className="w-full hidden md:flex items-end justify-between py-10 px-20">
       {/* <h1 className=" text-black text-2xl ">We offer <span className="text-secondary">services</span> designed <span className="text-gray-600">to optimize </span> your businesses <span className="text-gray-600">and achieve </span>your goals</h1> */}

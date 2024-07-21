@@ -213,7 +213,7 @@ const Businesses = () => {
               </div>
             ))
           ) : (
-            <div>No businesses found.</div>
+            <div className="text-slate-900">Loading Businesses...<br/> Reload if this takes too long </div>
           )}
         </div>
       </div>

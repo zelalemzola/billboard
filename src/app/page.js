@@ -39,7 +39,7 @@ export default function Home() {
       <div className="pl-[80px] w-1/3 hidden md:flex"><HeroRightText/></div>
     </div>
    </main>
-   <div className="h-screen w-full flex flex-col md:flex-row items-center justify-between px-2 md:px-6 py-10">
+   <div className="h-screen w-full flex flex-col-reverse md:flex-row items-center md:justify-between px-2 md:px-6 py-10">
      <h1 className=" w-[90%] md:w-1/2 text-2xl text-center mx-auto">Having the Previlege to access a platform that specifically advertizes businesses help&apos;s your business Meet the right <FlipWords words={words1}/><br/> and Grow Your Business  <FlipWords words={words2}/>  </h1>
      <Image src='/hero.svg' alt='hero desc' width={100} height={100} className="w-[40%] "/>
    </div>

@@ -14,7 +14,7 @@ const Contact = () => {
     const wordsinstagram= `instagram`
     const wordstwitter= `twitter`
   return (
-    <div className="h-screen w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-black/[0.2] relative ">
+    <div className="h-screen w-full dark:bg-black bg-white  dark:bg-grid-white/[0.2] bg-grid-slate-900/[0.2] relative ">
    <nav className='fixed w-full  p-3'>
         <div className=' flex items-center  text-black gap-4  p-2 border-2 border-black shadow-md mx-auto  w-fit rounded-full z-30'>
         <Link href='/' className='rounded-full hover:bg-black hover:text-white p-2 rounded-full'>Home</Link>

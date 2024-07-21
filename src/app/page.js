@@ -46,7 +46,7 @@ export default function Home() {
     </Button>
     </div>
     <div className="md:hidden md:mx-auto flex flex-col gap-4 mb-8">
-      <h1 className="text-black mx-auto py-10 text-2xl text-center">Our Services</h1>
+      <h1 className="text-black mx-auto py-10 text-3xl font-bold text-center">Our Services</h1>
       <ServiceSmallText/>
     </div>
     <div className="w-full hidden md:flex flex-col md:flex-row items-center gap-4 px-20 ">
@@ -81,18 +81,18 @@ export default function Home() {
            
     </div>
     <div className='flex flex-col items-center md:hidden gap-5 pt-6'>
-      <div className="flex items-center rounded-full px-2 py-2 gap-2 bg-black text-white text-xl w-fit">
+      <div className="flex items-center rounded-full px-2 py-2 gap-2 bg-slate-900 text-white text-xl w-fit">
       <HandCoins color='white'/> Business Consultancy
       </div>
-      <div className="flex items-center rounded-full px-2 py-2 gap-2 bg-black text-white text-xl w-fit">
+      <div className="flex items-center rounded-full px-2 py-2 gap-2 bg-slate-900 text-white text-xl w-fit">
       <TvMinimalPlay color='white' /> Digital Marketing
       </div>
-      <div className="flex items-center rounded-full px-2 py-2 gap-2 bg-black text-white text-xl w-fit">
+      <div className="flex items-center rounded-full px-2 py-2 gap-2 bg-slate-900 text-white text-xl w-fit">
       <Cpu  color='white'/> Tech Solutions
       </div>
     </div>
    </div>
-   <div className="h-screen bg-white flex flex-col pb-[160px] ">
+   <div className="h-screen bg-white flex flex-col pb-[160px] items-center justify-center">
     <HeroBottom/>
 
    </div>

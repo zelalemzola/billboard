@@ -1,89 +1,74 @@
-"use client";
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import Link from "next/link";
-import Image from "next/image";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Eye, Search, ThumbsUp, Check, ChevronsUpDown } from "lucide-react";
-import BusinessHero from "@/components/BusinessHero";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandItem,
-  CommandList,
-} from "@/components/ui/command";
-import { cn } from "@/lib/utils";
+"use client"
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { Input } from "@/components/ui/input"
+import { Button } from "@/components/ui/button"
+import { Eye, Search, ThumbsUp, Check, ChevronsUpDown } from "lucide-react"
+import BusinessHero from "@/components/BusinessHero"
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
+import { Command, CommandEmpty, CommandGroup, CommandItem, CommandList } from "@/components/ui/command"
+import { cn } from "@/lib/utils"
+import useSWR from "swr"
 
-const fetchBusinessesISR = async (category, search) => {
-  const response = await fetch(
-    `/api/businesses?category=${category}&search=${search}`,
-    {
-      next: { revalidate: 10 },
-    }
-  );
-  const data = await response.json();
-  return data;
-};
+
+const fetcher = async (url) => {
+  const response = await fetch(url)
+  return response.json()
+}
 
 const Businesses = () => {
-  const [businesses, setBusinesses] = useState([]);
-  const [categories, setCategories] = useState([]);
-  const [filteredCategories, setFilteredCategories] = useState([]);
-  const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [comboboxSearchTerm, setComboboxSearchTerm] = useState("");
-  const [open, setOpen] = useState(false);
-  const [value, setValue] = useState("");
+  const [filteredCategories, setFilteredCategories] = useState([])
+  const [searchTerm, setSearchTerm] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState("")
+  const [comboboxSearchTerm, setComboboxSearchTerm] = useState("")
+  const [open, setOpen] = useState(false)
+  const [value, setValue] = useState("")
 
-  useEffect(() => {
-    fetchBusinesses();
-    fetchCategories();
-  }, [selectedCategory, searchTerm]);
+  const { data: businessesData, isLoading: isLoadingBusinesses } = useSWR(
+    `/api/businesses?category=${selectedCategory}&search=${searchTerm}`,
+    fetcher,
+    { revalidateOnFocus: false },
+  )
 
-  const fetchBusinesses = async () => {
-    const data = await fetchBusinessesISR(selectedCategory, searchTerm);
-    setBusinesses(data.businesses);
-  };
+  const businesses = businessesData?.businesses || []
 
-  const fetchCategories = async () => {
-    const response = await axios.get("/api/categories");
-    setCategories(response.data.categories);
-    setFilteredCategories(response.data.categories);
-  };
+  const { data: categoriesData } = useSWR("/api/categories", fetcher, {
+    revalidateOnFocus: false,
+  })
+
+  const categories = categoriesData?.categories || []
 
   const handleCategoryChange = (value) => {
-    setSelectedCategory(value);
-  };
+    setSelectedCategory(value)
+  }
 
   const clearFilters = () => {
-    setSelectedCategory("");
-    setSearchTerm("");
-  };
+    setSelectedCategory("")
+    setSearchTerm("")
+  }
 
   const filteredBusinesses = businesses.filter((business) => {
-    const matchesSearch = business.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = business.name.toLowerCase().includes(searchTerm.toLowerCase())
     if (!selectedCategory) {
-      return matchesSearch;
+      return matchesSearch
     } else {
-      return business.category && business.category._id === selectedCategory && matchesSearch;
+      return business.category && business.category._id === selectedCategory && matchesSearch
     }
-  });
+  })
 
   const handleSelect = (currentValue) => {
-    setValue(currentValue === value ? "" : currentValue);
-    setOpen(false);
-    handleCategoryChange(currentValue);
-  };
+    setValue(currentValue === value ? "" : currentValue)
+    setOpen(false)
+    handleCategoryChange(currentValue)
+  }
 
   useEffect(() => {
     const filtered = categories.filter((category) =>
-      category.name.toLowerCase().includes(comboboxSearchTerm.toLowerCase())
-    );
-    setFilteredCategories(filtered);
-  }, [comboboxSearchTerm, categories]);
+      category.name.toLowerCase().includes(comboboxSearchTerm.toLowerCase()),
+    )
+    setFilteredCategories(filtered)
+  }, [comboboxSearchTerm, categories])
 
   return (
     <div className="flex flex-col">
@@ -92,16 +77,10 @@ const Businesses = () => {
           <Link href="/" className="rounded-full hover:bg-secondary hover:text-white p-2">
             Home
           </Link>
-          <Link
-            href="/businesses"
-            className="rounded-full hover:bg-secondary hover:text-white p-2"
-          >
+          <Link href="/businesses" className="rounded-full hover:bg-secondary hover:text-white p-2">
             Billboards
           </Link>
-          <Link
-            href="/contact"
-            className="rounded-full hover:bg-secondary hover:text-white p-2"
-          >
+          <Link href="/contact" className="rounded-full hover:bg-secondary hover:text-white p-2">
             Contact
           </Link>
         </div>
@@ -128,7 +107,9 @@ const Businesses = () => {
                 className="justify-between bg-secondary w-fit hover:bg-secondary"
               >
                 {value
-                  ? value === "" ? "All Categories" : categories.find((category) => category._id === value)?.name.split(' ')[0]
+                  ? value === ""
+                    ? "All Categories"
+                    : categories.find((category) => category._id === value)?.name.split(" ")[0]
                   : "Select category..."}
                 <ChevronsUpDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
               </Button>
@@ -141,23 +122,15 @@ const Businesses = () => {
                     placeholder="Search category..."
                     value={comboboxSearchTerm}
                     onChange={(e) => {
-                      setComboboxSearchTerm(e.target.value);
-                      console.log("Input Value:", e.target.value);  // Debugging line
+                      setComboboxSearchTerm(e.target.value)
+                      console.log("Input Value:", e.target.value) // Debugging line
                     }}
                     className="w-full p-2 border rounded"
                   />
                 </div>
                 <CommandList>
-                  <CommandItem
-                    value=""
-                    onSelect={() => handleSelect("")}
-                  >
-                    <Check
-                      className={cn(
-                        "mr-2 h-4 w-4",
-                        value === "" ? "opacity-100" : "opacity-0"
-                      )}
-                    />
+                  <CommandItem value="" onSelect={() => handleSelect("")}>
+                    <Check className={cn("mr-2 h-4 w-4", value === "" ? "opacity-100" : "opacity-0")} />
                     All Categories
                   </CommandItem>
                   {filteredCategories.length > 0 ? (
@@ -168,12 +141,7 @@ const Businesses = () => {
                           value={category._id}
                           onSelect={() => handleSelect(category._id)}
                         >
-                          <Check
-                            className={cn(
-                              "mr-2 h-4 w-4",
-                              value === category._id ? "opacity-100" : "opacity-0"
-                            )}
-                          />
+                          <Check className={cn("mr-2 h-4 w-4", value === category._id ? "opacity-100" : "opacity-0")} />
                           {category.name}
                         </CommandItem>
                       ))}
@@ -189,13 +157,17 @@ const Businesses = () => {
       </div>
       <div className="container mx-auto lg:p-8 pb-[160px] pt-[60%] ">
         <div className="flex flex-wrap place-items-start justify-center gap-2 pt-[19%]">
-          {filteredBusinesses.length > 0 ? (
+          {isLoadingBusinesses ? (
+            <div className="flex items-center justify-center w-full p-8">
+              <div className="text-slate-900">Loading Businesses...</div>
+            </div>
+          ) : filteredBusinesses.length > 0 ? (
             filteredBusinesses.map((business) => (
               <div key={business._id} className="w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 rounded-lg">
                 <Link href={`/businesses/${business._id}`}>
                   <div className="border rounded-lg overflow-hidden cursor-pointer shadow-lg">
                     <Image
-                      src={business.bannerImageUrl}
+                      src={business.bannerImageUrl || "/placeholder.svg"}
                       alt={business.name}
                       width={300}
                       height={300}
@@ -203,9 +175,14 @@ const Businesses = () => {
                     />
                     <div className="p-4 flex flex-wrap justify-between">
                       <h2 className="text-lg font-bold">{business.name}</h2>
-                      <div className='flex flex-wrap justify-between gap-2'>
-                        <p className="text-black flex items-center"><ThumbsUp size='14' color="gray"/>: {business.likes}</p>
-                        <p className="text-black flex items-center"> <Eye size='14' color="gray"/>: {business.clicks}</p>
+                      <div className="flex flex-wrap justify-between gap-2">
+                        <p className="text-black flex items-center">
+                          <ThumbsUp size="14" color="gray" />: {business.likes}
+                        </p>
+                        <p className="text-black flex items-center">
+                          {" "}
+                          <Eye size="14" color="gray" />: {business.clicks}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -213,12 +190,12 @@ const Businesses = () => {
               </div>
             ))
           ) : (
-            <div className="text-slate-900">Loading Businesses...<br/> Reload if this takes too long </div>
+            <div className="text-slate-900">No businesses found</div>
           )}
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Businesses;
+export default Businesses
